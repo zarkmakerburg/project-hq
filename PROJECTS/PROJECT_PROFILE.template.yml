@@ -1,0 +1,28 @@
+# Copy this template into the project repository as PROJECT_PROFILE.yml or PROJECT_PROFILE.md.
+project:
+  id: "REPLACE_WITH_STABLE_PROJECT_ID"
+  name: "REPLACE_WITH_PROJECT_NAME"
+  repository: "https://github.com/OWNER/REPOSITORY"
+  default_branch: "main"
+  canonical_operations_board: "https://github.com/OWNER/REPOSITORY/issues/NUMBER"
+  roadmap: "PATH_OR_URL_OR_NONE"
+
+continuation:
+  command: "REPLACE_WITH_PROJECT_SPECIFIC_COMMAND_OR_NONE"
+  behavior: "Continue from latest verified state; do not replace execution with a status recap."
+
+environments:
+  registered_lab_hosts: []
+  production_hosts: []
+  access_procedure: "NOT_DECLARED"
+
+permissions:
+  merge: "EXPLICIT_GATE"
+  release: "EXPLICIT_GATE"
+  deploy: "EXPLICIT_GATE"
+  real_host_operations: "TASK_SPECIFIC_OWNER_AUTHORIZATION_REQUIRED"
+
+rules:
+  - "Never copy credentials or secret values into this profile."
+  - "Unlisted or unidentified hosts are production/out of scope."
+  - "Project-specific architecture and acceptance criteria remain in the project repository."
