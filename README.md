@@ -13,10 +13,18 @@ These are conversational control commands, not GitHub CLI commands or globally p
 ## Start here
 
 1. Read [`AGENTS.md`](AGENTS.md).
-2. Select one project profile based on the user's explicit project context.
-3. Read that project's profile and its declared canonical board, repository and environment rules.
+2. If maintaining this HQ repository, bind [`PROJECT_PROFILE.md`](PROJECT_PROFILE.md); otherwise select exactly one consumer-project profile from the user's explicit context.
+3. Read the selected profile and its declared canonical board, repository and environment rules.
 4. Inspect live GitHub state before acting; never rely on stale chat summaries as current evidence.
 5. Select only the tools and skills relevant to the task.
+
+## Using HQ in ChatGPT
+
+See [`CHATGPT-INSTRUCTIONS.md`](CHATGPT-INSTRUCTIONS.md) for the compact instructions to place in ChatGPT Project Instructions or Custom Instructions. Loading this repository does not automatically change account settings or activate HQ in every chat.
+
+## HQ repository governance
+
+When maintaining this repository itself, use [`PROJECT_PROFILE.md`](PROJECT_PROFILE.md) and its [canonical operations board](https://github.com/zarkmakerburg/project-hq/issues/1). Consumer projects must not use this board.
 
 ## Structure
 
@@ -25,6 +33,7 @@ These are conversational control commands, not GitHub CLI commands or globally p
 - `TOOLS/` — tool routing and skill selection.
 - `TEMPLATES/` — project-neutral task, handoff and evidence templates.
 - `PROJECTS/` — project profile template and integration guide.
+- `PROJECT_PROFILE.md` — profile and governance binding for this HQ repository itself.
 
 ## Isolation rule
 
