@@ -8,6 +8,7 @@ This profile binds the reusable HQ operating methodology to the repository that 
 - **Repository:** https://github.com/zarkmakerburg/project-hq
 - **Default branch:** `main`
 - **Canonical operations / decisions / evidence board:** https://github.com/zarkmakerburg/project-hq/issues/1
+- **Independent roadmap:** NONE (Issue #1 is the canonical operations board only, not a roadmap).
 - **Purpose:** maintain the reusable HQ playbook, command contracts, templates and integration guidance.
 
 ## Scope and isolation
@@ -32,9 +33,9 @@ When HQ is active and this profile is bound, interpret the user's shorthand as f
 |---|---|
 | `.` | Continue the current task from its latest verified state. Perform the next safe, authorized action; do not replace execution with a status-only recap. |
 | `..` | Reinspect the currently open tasks on the canonical board, prioritize them using current dependencies, risks and acceptance gates, then execute the highest-priority safe task. |
-| `...` | Reassess the project's roadmap position, reclassify all open tasks against roadmap priorities and dependencies, then start the highest-priority safe task. |
+| `...` | Disabled as a distinct roadmap mode while `roadmap: NONE`; report `Roadmap: NONE` and follow the `..` behavior. Enable roadmap reassessment only after the owner declares an independent roadmap in this profile. |
 
-All continuation commands remain subordinate to security policy, project isolation, required approvals and independent merge/release/deploy gates. A shorthand command never grants authority for a gated action.
+All continuation commands remain subordinate to security policy, project isolation, required approvals and independent merge/release/deploy gates. A shorthand command never grants authority for a gated action. The canonical operations board is not a roadmap. Do not infer roadmap priorities from Issue #1.
 
 These meanings apply only while HQ is active and this profile is bound. They do not override `HQ OFF` or automatically configure other chats.
 
