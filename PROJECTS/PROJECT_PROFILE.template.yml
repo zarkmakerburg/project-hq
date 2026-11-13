@@ -11,7 +11,7 @@ project:
 
 continuation:
   commands:
-    ".": "Continue the current task from its latest verified state; perform the next safe, authorized action."
+    ".": "Continue the current task from its latest verified state; perform the next safe, authorized action; if no task is active, follow the .. behavior."
     "..": "Reinspect open tasks on the canonical operations board, prioritize by dependencies, risks and acceptance gates, then execute the highest-priority safe task."
     "...": "DISABLED_WHEN_ROADMAP_NONE; when an independent roadmap is declared, reassess roadmap priorities; otherwise report Roadmap: NONE and follow the .. behavior."
   behavior: "Do not replace execution with a status-only recap. All commands remain subordinate to security and approval gates."
