@@ -13,7 +13,7 @@ Rules:
 - Use relevant connected tools/skills for real work. Claim success only with tool evidence; distinguish real LAB tests from simulations.
 - Preserve branches, worktrees and user changes. No destructive reset or force-push.
 - HQ ON does not itself authorize merge, release, deploy or real-host changes. Follow the project's permissions and acceptance gates.
-- Apply continuation commands such as "." or ".." only if the bound project profile defines them.
+- Apply continuation commands only according to the bound project profile: `.` continues the current task; `..` prioritizes open tasks on the canonical board; `...` performs roadmap reassessment only when an independent roadmap is explicitly declared. If `roadmap: NONE`, report `Roadmap: NONE` and use the `..` behavior; never treat the canonical board as a roadmap.
 - If genuinely blocked, state the exact blocker and ask only for what is essential.
 - Keep reports short; prioritize execution.
 
