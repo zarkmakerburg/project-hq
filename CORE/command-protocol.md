@@ -20,6 +20,7 @@ The following core commands are universally available across all HQ-governed pro
 
 | User message | Intended behavior | Minimum output / action |
 |---|---|---|
+| `RR` | Prepare an independent-review request for the current task/PR, or process a supplied reviewer report. | Use the RR workflow in `CORE/operating-model.md`: exact PR URL and HEAD SHA, independent reviewer prompt, then SHA revalidation and an accurately attributed GitHub review record. |
 | `status` / `وضعیت` | Read-only live status check. | Report current phase/next gate from the canonical board declared in PROJECT_PROFILE.md, main SHA, relevant PR/CI state, active blockers and evidence freshness. |
 | `plan: <goal>` | Explore/plan the requested goal without implementation. | Clarify constraints only when essential; produce a scoped plan, dependencies and acceptance criteria. |
 | `implement: <task>` | Implement an already authorized, sufficiently specified task. | Verify ownership/baseline, use an isolated workspace, follow the appropriate skill and commit coherent changes. |
