@@ -5,7 +5,9 @@ project:
   repository: "https://github.com/OWNER/REPOSITORY"
   default_branch: "main"
   canonical_operations_board: "https://github.com/OWNER/REPOSITORY/issues/NUMBER"
-  roadmap: "PATH_OR_URL_OR_NONE"
+  # Set a path or URL only after the owner explicitly declares an independent roadmap.
+  # Never infer a roadmap from the canonical operations board.
+  roadmap: "NONE"
 
 continuation:
   command: "REPLACE_WITH_PROJECT_SPECIFIC_COMMAND_OR_NONE"
