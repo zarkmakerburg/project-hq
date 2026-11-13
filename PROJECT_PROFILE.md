@@ -24,6 +24,17 @@ This profile binds the reusable HQ operating methodology to the repository that 
 - Merge, release and publishing remain separate gates governed by repository settings and explicit owner authorization.
 - The playbook does not grant tool access, install plugins, or configure ChatGPT account settings.
 
-## Continuation
+## Continuation commands
 
-For work on this repository, continue from the latest verified state when the user sends `.` or `..` in a conversation where HQ is active. This rule does not override `HQ OFF`.
+When HQ is active and this profile is bound, interpret the user's shorthand as follows:
+
+| Command | Required behavior |
+|---|---|
+| `.` | Continue the current task from its latest verified state. Perform the next safe, authorized action; do not replace execution with a status-only recap. |
+| `..` | Reinspect the currently open tasks on the canonical board, prioritize them using current dependencies, risks and acceptance gates, then execute the highest-priority safe task. |
+| `...` | Reassess the project's roadmap position, reclassify all open tasks against roadmap priorities and dependencies, then start the highest-priority safe task. |
+
+All continuation commands remain subordinate to security policy, project isolation, required approvals and independent merge/release/deploy gates. A shorthand command never grants authority for a gated action.
+
+These meanings apply only while HQ is active and this profile is bound. They do not override `HQ OFF` or automatically configure other chats.
+
