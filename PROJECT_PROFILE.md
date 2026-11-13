@@ -31,11 +31,10 @@ When HQ is active and this profile is bound, interpret the user's shorthand as f
 
 | Command | Required behavior |
 |---|---|
-| `.` | Continue the current task from its latest verified state. Perform the next safe, authorized action; do not replace execution with a status-only recap. |
+| `.` | Continue the current task from its latest verified state. Perform the next safe, authorized action; if no task is active, follow the `..` behavior; do not replace execution with a status-only recap. |
 | `..` | Reinspect the currently open tasks on the canonical board, prioritize them using current dependencies, risks and acceptance gates, then execute the highest-priority safe task. |
 | `...` | Disabled as a distinct roadmap mode while `roadmap: NONE`; report `Roadmap: NONE` and follow the `..` behavior. Enable roadmap reassessment only after the owner declares an independent roadmap in this profile. |
 
 All continuation commands remain subordinate to security policy, project isolation, required approvals and independent merge/release/deploy gates. A shorthand command never grants authority for a gated action. The canonical operations board is not a roadmap. Do not infer roadmap priorities from Issue #1.
 
 These meanings apply only while HQ is active and this profile is bound. They do not override `HQ OFF` or automatically configure other chats.
-
