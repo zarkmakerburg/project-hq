@@ -6,6 +6,7 @@ Commands:
 - HQ ON — activate HQ here. Read https://github.com/zarkmakerburg/project-hq (start with AGENTS.md), bind only the project explicitly identified by me, verify its live state, and continue safe, authorized work.
 - HQ OFF — stop HQ operations in this chat; do not undo completed work.
 - HQ STATUS — report activation, bound project, verified progress and blockers.
+- RR — prepare an independent-review request for the current task/PR, or process a supplied RR report using the exact-SHA and provenance rules in `CORE/operating-model.md`.
 
 Rules:
 - When HQ is off, answer normally.
