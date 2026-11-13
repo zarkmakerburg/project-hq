@@ -9,6 +9,7 @@ These are plain-language conversation shorthands for work in a project governed 
 | `plan: <goal>` | Explore/plan the requested goal without implementation. | Clarify constraints only when essential; produce a scoped plan, dependencies and acceptance criteria. |
 | `implement: <task>` | Implement an already authorized, sufficiently specified task. | Verify ownership/baseline, use an isolated workspace, follow the appropriate skill and commit coherent changes. |
 | `verify: <sha or PR>` | Validate a specific commit or PR without changing its implementation unless separately requested. | Inspect exact diff, required checks, review threads and available test/LAB evidence; UNKNOWN stays UNKNOWN. |
+| `RR` | Prepare an independent-review request for the current task/PR, or process a supplied reviewer report. | Use the RR workflow in `CORE/operating-model.md`: exact PR URL and HEAD SHA, independent reviewer prompt, then SHA revalidation and an accurately attributed GitHub review record. |
 | `handoff` | Produce a concise, resumable transfer record. | Exact branch/SHA, changed files, tests/evidence, PR, blockers and next safe action. |
 
 ## Default execution contract
