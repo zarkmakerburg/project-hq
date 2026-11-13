@@ -5,7 +5,7 @@
 - **State:** proposed | ready | active | blocked | review | independent-review | accepted
 - **Owner / role:** <worker or HQ role>
 - **Created / updated (UTC):** <YYYY-MM-DD HH:MM>
-- **Canonical board:** the project's canonical board defined in docs/HQ/PROJECT_PROFILE.md
+- **Canonical board:** the project's canonical board defined in PROJECT_PROFILE.md
 
 ## Goal and scope
 
