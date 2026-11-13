@@ -35,7 +35,7 @@ One person/agent may perform more than one role for a small task, but implementa
 | `blocked` | A real dependency, access, security or decision prevents safe progress | Exact blocker, impact, required owner/action and last safe SHA recorded. |
 | `review` | Implementation is complete and submitted for evaluation | Commit/PR plus reproducible validation evidence are available. |
 | `independent-review` | A reviewer who did not author the change evaluates a governance/security-sensitive PR | Independent review is submitted against the exact head SHA; findings and disposition are recorded. Self-review or an unavailable reviewer does not satisfy this state. |
-| `accepted` | QA/Integrator has verified the defined acceptance criteria | Review disposition and exact accepted SHA/evidence recorded. For any PR changing `AGENTS.md`, `docs/HQ/**`, security policy, permissions, or delivery gates, a submitted independent review with no unresolved blocking findings is mandatory before acceptance. |
+| `accepted` | QA/Integrator has verified the defined acceptance criteria | Review disposition and exact accepted SHA/evidence recorded. For any PR changing `AGENTS.md`, `CORE/**`, vendored `docs/HQ/**`, security policy, permissions, or delivery gates, a submitted independent review with no unresolved blocking findings is mandatory before acceptance. |
 
 A task may return from `review` to `active` for a bounded fix, or from any active state to `blocked` when evidence or authority is missing. For governance/security-sensitive PRs, the required path is `review` → `independent-review` → `accepted`; do not skip the independent-review state because the change is documentation-only or CI is green. “Merged” and “released” are delivery outcomes, not substitutes for technical acceptance.
 
@@ -71,7 +71,7 @@ Passing an earlier gate never implies approval for a later one. This document do
 
 ## Operational record
 
-Use the project's canonical board declared in the selected project profile as the append-only operational record. Add dated entries for decisions, state changes, test failures, approvals, risks and handoffs. Link exact GitHub artifacts. Keep policy in `docs/HQ/`; keep live status and history on the project's canonical board. Do not create parallel boards or duplicate a changing status snapshot in static docs.
+Use the project's canonical board declared in the selected project profile as the append-only operational record. Add dated entries for decisions, state changes, test failures, approvals, risks and handoffs. Link exact GitHub artifacts. Keep HQ's canonical policy in `CORE/**` (and any project-local vendored snapshot under `docs/HQ/**`); keep live status and history on the project's canonical board. Do not create parallel boards or duplicate a changing status snapshot in static docs.
 
 
 ## Untrusted input and authority

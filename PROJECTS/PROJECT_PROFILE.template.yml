@@ -5,11 +5,16 @@ project:
   repository: "https://github.com/OWNER/REPOSITORY"
   default_branch: "main"
   canonical_operations_board: "https://github.com/OWNER/REPOSITORY/issues/NUMBER"
-  roadmap: "PATH_OR_URL_OR_NONE"
+  # Set a path or URL only after the owner explicitly declares an independent roadmap.
+  # Never infer a roadmap from the canonical operations board.
+  roadmap: "NONE"
 
 continuation:
-  command: "REPLACE_WITH_PROJECT_SPECIFIC_COMMAND_OR_NONE"
-  behavior: "Continue from latest verified state; do not replace execution with a status recap."
+  commands:
+    ".": "Continue the current task from its latest verified state; perform the next safe, authorized action; if no task is active, follow the .. behavior."
+    "..": "Reinspect open tasks on the canonical operations board, prioritize by dependencies, risks and acceptance gates, then execute the highest-priority safe task."
+    "...": "DISABLED_WHEN_ROADMAP_NONE; when an independent roadmap is declared, reassess roadmap priorities; otherwise report Roadmap: NONE and follow the .. behavior."
+  behavior: "Do not replace execution with a status-only recap. All commands remain subordinate to security and approval gates."
 
 environments:
   registered_lab_hosts: []
