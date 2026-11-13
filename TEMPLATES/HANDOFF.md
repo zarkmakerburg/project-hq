@@ -44,4 +44,4 @@ Do not list unexecuted checks as PASS. Preserve failed runs and explain any reru
 
 ## Canonical record
 
-Append operationally significant changes to the project's canonical board defined in docs/HQ/PROJECT_PROFILE.md. This handoff summarizes the transition; it does not replace the append-only board.
+Append operationally significant changes to the project's canonical board defined in PROJECT_PROFILE.md. This handoff summarizes the transition; it does not replace the append-only board.
