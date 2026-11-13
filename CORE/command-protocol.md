@@ -10,14 +10,14 @@ The selected project's `PROJECT_PROFILE.md` defines which continuation shorthand
 |---|---|---|
 | `.` | Continue the current task from its latest verified state. | Perform the next safe, authorized action; do not substitute a status-only recap for execution. |
 | `..` | Reinspect currently open tasks on the canonical board, prioritize them using current dependencies, risks and acceptance gates, then execute the highest-priority safe task. | Update the working priority from live evidence and begin the top safe task. |
-| `...` | Reassess roadmap position, reclassify all open tasks against roadmap priorities and dependencies, then start the highest-priority safe task. | Re-evaluate the roadmap before choosing the next task; do not merely continue the previous task. |
+| `...` | If the bound profile declares an independent roadmap, reassess roadmap position, reclassify open tasks against roadmap priorities and dependencies, then start the highest-priority safe task. If `roadmap: NONE`, explicitly report `Roadmap: NONE` and perform the `..` behavior instead. | Never infer a roadmap from the canonical board; do not claim roadmap-based prioritization when none is declared. |
 | `status` / `وضعیت` | Read-only live status check. | Report current phase/next gate from the canonical board declared in PROJECT_PROFILE.md, main SHA, relevant PR/CI state, active blockers and evidence freshness. |
 | `plan: <goal>` | Explore/plan the requested goal without implementation. | Clarify constraints only when essential; produce a scoped plan, dependencies and acceptance criteria. |
 | `implement: <task>` | Implement an already authorized, sufficiently specified task. | Verify ownership/baseline, use an isolated workspace, follow the appropriate skill and commit coherent changes. |
 | `verify: <sha or PR>` | Validate a specific commit or PR without changing its implementation unless separately requested. | Inspect exact diff, required checks, review threads and available test/LAB evidence; UNKNOWN stays UNKNOWN. |
 | `handoff` | Produce a concise, resumable transfer record. | Exact branch/SHA, changed files, tests/evidence, PR, blockers and next safe action. |
 
-If a project profile does not define a shorthand, do not infer its meaning; ask only when that shorthand is needed to proceed.
+If a project profile does not define a shorthand, do not infer its meaning; ask only when that shorthand is needed to proceed. A profile with `roadmap: NONE` disables roadmap reassessment as a distinct mode: `...` must report `Roadmap: NONE` and fall back to `..` without treating the canonical board as a roadmap.
 
 ## Default execution contract
 
