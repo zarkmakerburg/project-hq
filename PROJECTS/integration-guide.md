@@ -8,3 +8,4 @@
 6. Configure the ChatGPT Project/custom instructions or new conversation to load HQ `AGENTS.md` when needed. A GitHub repository alone does not automatically configure every ChatGPT chat.
 7. Verify the project binding and access before the first operation. No permissions are inherited from other projects.
 8. Preserve the continuation command contract: `.` continues the current task; `..` prioritizes open canonical-board tasks; `...` performs roadmap reassessment only when an independent roadmap is declared. With `roadmap: NONE`, `...` reports that no roadmap exists and falls back to `..`.
+9. Project-specific usage guides (repository roles, evidence limits, product constraints) belong in the consumer repository next to its profile, not in this repository. This repository stays project-agnostic; link to the consumer guide from the consumer's `AGENTS.md`.
